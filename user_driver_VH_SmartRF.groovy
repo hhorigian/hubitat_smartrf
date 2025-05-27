@@ -117,7 +117,7 @@ def push(number) {
 def EnviaComando(buttonnumber) {
 
     log.info "Enviando comando para o botão: " + buttonnumber
-    def URI = "http://" + state.currentip + "/api/device/deviceDetails/smartHomeAutoHttpControl?serialNum=" + state.serialNum + "&verifyCode="  + state.verifyCode + "&state=11&num=" + state.cId + "&type=" + buttonnumber + "&scmMode=101" 
+    def URI = "http://" + state.currentip + "/api/device/deviceDetails/autoHttpControl?serialNum=" + state.serialNum + "&verifyCode="  + state.verifyCode + "&state=11&num=" + state.cId + "&type=" + buttonnumber + "&scmMode=101" 
     httpPOSTExec(URI)
     log.info "HTTP" +  URI 
     
